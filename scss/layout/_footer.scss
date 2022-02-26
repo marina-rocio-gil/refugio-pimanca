@@ -1,0 +1,23 @@
+/*----------- FOOTER -----------*/
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background: #0b2f31;
+    color: rgb(182, 179, 179);
+    box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
+
+        .copy_span {
+            font-family: "Lobster";
+            font-size: 1.1em;
+            color: #cff34b;
+        }
+}
+
+/*----------- FOOTER MEDIA QUERY-----------*/
+@media only screen and (max-width: 480px) {
+    .copyright {
+        font-size: 0.8em;
+    }
+}

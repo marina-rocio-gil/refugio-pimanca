@@ -1,0 +1,122 @@
+/* ----------- NOSOTROS ----------- */
+#nosotros {
+    width: 85%;
+    margin: 30px auto;
+
+        .title {
+            text-align: center;
+            font-size: 4vmin;
+
+            .section_text {
+                font-size: 0.75em;
+                margin: 18px 0;
+            }
+        }
+
+        .line {
+            width: 150px;
+            height: 4px;
+            margin: 5px auto;
+            border-radius: 5px;
+        }        
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.nosotros_container {
+    width: 30%;
+    position: relative;
+
+    &:focus, &:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        border-radius: 10px;
+        transition: .5s ease-in-out;
+    }
+
+    .nosotros_info {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 60%;
+        left: 60%;
+        width: 75%;
+        height: 75%;
+        transform: translate( -63%, -65%);
+        text-align: center;
+        background: rgba(252, 3, 107, .8);
+        border-radius: 10px;
+
+            .nosotros_card_title {
+                padding: 15px 0;
+                font-size: 1.1em;
+                color: #f5f5f5;
+            }
+
+            .nosotros_card_text {
+                padding: 10px;
+                font-size: 0.9em;
+                color: #fff;
+            }
+    }
+
+    &:hover .nosotros_info {
+        opacity: 1;
+    }
+}
+
+/* ----------- NOSOTROS MEDIA QUERIES ----------- */
+@media only screen and (max-width: 480px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+        .nosotros_container {
+            width: 80%;
+            margin: 8px;
+
+            .nosotros_info {
+                .nosotros_card_title {
+                    display: none;
+                }
+
+                .nosotros_card_text {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .row_bottom {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px)  {
+    .nosotros_section {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        margin: 5px;
+    }
+}
+
+
+
+
+

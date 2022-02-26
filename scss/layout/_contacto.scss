@@ -1,0 +1,234 @@
+/*----------- CONTACTO -----------*/
+#contacto {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, #0c3436 0%, #377579 100%);
+
+        &::before {
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: #6667AB;
+        }
+
+        .contacto_container {
+            position: relative;
+            min-width: 1100px;
+            min-height: 550px;
+            display: flex;
+            z-index: 2;
+
+                .contacto_info {
+                    position: absolute;
+                    top: 40px;
+                    width: 350px;
+                    height: calc(100% - 80px);
+                    background: linear-gradient(0deg, #0c3436 0%, #377579 100%);;
+                    z-index: 1;
+                    padding: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    justify-content: space-between;
+                    box-shadow: 0 20px 25px rgba( 0, 0, 0, 0.15);
+
+                        h1 {
+                            font-size: 30px;
+                            font-weight: 600;
+                            color: #fff;
+                        }
+
+                        .info {
+                            position: relative;
+                            margin: 20px 0;
+
+                                li {
+                                    position: relative;
+                                    list-style: none;
+                                    display: flex;
+                                    margin: 20px 0;
+                                    cursor: pointer;
+                                    align-items: flex-start;
+
+                                        span:nth-child(1) {
+                                            width: 30px;
+                                            min-width: 30px;
+
+                                                img {
+                                                    max-width: 100%;
+                                                    filter: invert(1);
+                                                }
+                                        }
+
+                                        span:nth-child(2) {
+                                            color:#fff;
+                                            margin-left: 10px;
+                                            font-weight: 300;
+                                        }
+                                    
+                                }
+                        }
+
+                        .redes {
+                            position: relative;
+                            display: flex;
+                            list-style-type: none;
+                            
+                                img {
+                                    filter:invert(1);
+                                    margin-right: 25px;
+                                }
+                        }
+                    
+                }
+
+                .contacto_form {
+                    position: absolute;
+                    padding: 70px 50px;
+                    padding-left: 250px;
+                    margin-left: 150px;
+                    width: calc(100% - 150px);
+                    height: 100%;
+                    background: #fff;
+                    box-shadow: 0 50px 50px rgba( 0, 0, 0, 0.25);
+
+                        h2 {
+                            font-size: 24px;
+                            font-weight: 600;
+                            color:#377579;
+                        }
+
+                        .form_box {
+                            position: relative;
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            padding-top: 30px;
+
+                                .input_box {
+                                    position: relative;
+                                    margin-bottom: 35px;
+
+                                        input, textarea {
+                                            width: 100%;
+                                            resize: none;
+                                            padding: 5px 0;
+                                            font-size: 18px;
+                                            font-weight: 300;
+                                            color: #333;
+                                            border: none;
+                                            outline: none;
+                                            border-bottom: 1px solid #777;
+                                        }
+
+                                        textarea {
+                                            height: 120px;
+                                        }
+
+                                        span {
+                                            position: absolute;
+                                            left: 0;
+                                            padding: 5px 0;
+                                            pointer-events: none;
+                                            font-size: 18px;
+                                            font-weight: 300;
+                                            transition: 0.3s;
+                                        }
+
+                                        input:focus ~ span,
+                                        input:valid ~ span,
+                                        textarea:focus ~ span,
+                                        textarea:valid ~ span {
+                                            transform: translateY(-20px);
+                                            font-size: 12px;
+                                            font-weight: 400;
+                                            letter-spacing: 1px;
+                                            color: #377579;
+                                            font-weight: 600;
+                                        }
+
+                                        input[type="submit"] {
+                                            position: relative;
+                                            cursor: pointer;
+                                            padding: 12px;
+                                            background: #0f4042;
+                                            color: #fff;
+                                            font-weight: 500;
+                                            max-width: 150px;
+
+                                                &:hover {
+                                                    background: #377579;
+                                                }
+                                        }
+                                }
+
+                                .w50 {
+                                    width: 47%;
+                                }
+
+                                .w100 {
+                                    width: 100%;
+                                }
+                        }
+                }
+        }
+}
+
+/*----------- CONTACTO MEDIA QUERIES-----------*/
+@media only screen and (max-width: 1200px) {
+    #contacto {
+        .contacto_container {
+            width: 90%;
+            min-width: auto;
+            margin: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+            .contacto_info {
+                top: 0;
+                height: 550px;
+                position: relative;
+                box-shadow: none;
+            }
+
+            .contacto_form {
+                position: relative;
+                width: calc(100% - 350px);
+                margin-left: 0;
+                padding-left: 0;
+                padding: 40px;
+                height: 550px;
+                box-shadow: none;
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 768px) {
+    #contacto {
+        background: #6667AB;
+
+        .contacto_container {
+            display: flex;
+            flex-direction: column-reverse;
+
+                .contacto_info {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .contacto_form {
+                    width: 100%;
+                    height: auto;
+                }
+        }
+    }
+
+    #contacto::before {
+        display: none;
+    }
+}

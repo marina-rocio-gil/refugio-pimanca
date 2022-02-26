@@ -1,0 +1,29 @@
+/* ----------- GLOBAL ----------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Livvic";
+}
+
+.title {
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: #6667AB;
+    margin: 5px auto;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #f5f5f5;
+
+    &:hover {
+        color: #cff34b;
+    }
+}
